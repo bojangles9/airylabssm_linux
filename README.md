@@ -32,8 +32,12 @@ WantedBy=multi-user.target
 General flow of the application:
 
 - Waits to see if the SSM is plugged in and looks for it at /dev/ttyUSB0
-- If found it goes into capture mode writing a csv into the folder specificed at the top (running as root as need privilegs to read from com port)
+- If found it goes into capture mode writing a csv into the folder specified at the top (running as root as need privileges to read from com port)
 - Streams data into the CSV until the SSM is disconnected
-- CSV is then copied to a predefined location using SCP, and deleted locally. If it isn't sucessfully copied remotely the file stays there
-- Continues monitoring to see if SSM is plugged back and will establish a new capture file and re-run from scratch
+- CSV is then copied to a predefined location using SCP, and deleted locally. If it isn't successfully copied remotely the file stays there
+- Continues monitoring to see if SSM is plugged back and will establish a new capture file and re-run from the beginning
+
+
+Took some inspiration from this pluging which allowed me to reverse the JAR file and view the connection values and regex which allowed me to parse the data.
+http://www.joachim-stehle.de/sssm_eng.html
 
