@@ -33,7 +33,7 @@ WantedBy=multi-user.target
 General flow of the application:
 
 - Waits to see if the SSM is plugged in and looks for it at /dev/ttyUSB0
-- If found it goes into capture mode writing a csv into the folder specified at the top (running as root as need privileges to read from com port)
+- If found it goes into capture mode writing a csv into the folder specified at the top (in initial testing root was needed to read the COM port, but turns out not needed, so can run as regular user)
 - Streams data into the CSV until the SSM is disconnected
 - CSV is then copied to a predefined location using SCP, and deleted locally. If it isn't successfully copied remotely the file stays there
 - Continues monitoring to see if SSM is plugged back and will establish a new capture file and re-run from the beginning
