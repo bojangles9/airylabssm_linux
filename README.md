@@ -1,5 +1,5 @@
 # airylabssm_linux
-A small tool to let you read the values coming from your AIrylabs SSM via rasperry pi or similar
+A small tool to let you read the values coming from your AIrylabs SSM (Solar Scintalation Monitor) via rasperry pi or similar
 
 
 I run this as service so that it starts automatically when the Pi boots up. 
